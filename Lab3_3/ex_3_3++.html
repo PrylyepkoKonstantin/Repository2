@@ -107,16 +107,20 @@
 
     @media (max-width:800px) {
     .content,.article {width: 100%;}
-    .mask_1, .mask_3, .nav, .link_container3, .aside2 {display:none;}
+    .mask_1, .mask_3, .nav, .link_container3, .aside2, .aside {display:none;}
     h1{text-align:center;}
 
-    .aside, .aside3{
-      width: 100%;
-      background: #ddd; 
+    .aside3 {
       display: inline-block;
-    }
+      line-height: 100%;
+      font-size: 14px;
+      background: #ddd; 
+      }
      
-    .link_container, .link_container2{    
+    .link_container2, .link_container4{
+      vertical-align: top;
+      width: 305px;
+      display: inline-block;
       padding: 10px;
       text-transform: uppercase;
     }
@@ -127,18 +131,19 @@
         list-style: none;
       }
     .dropdown {
-        left: 82px;
         display: none;
-        position: absolute;
+        position: relative;
         list-style: none;
       }
     .dropdown li{
+        /*border: 1px solid black;*/
+        background: #ddd; 
         margin: 5px;
         padding: 5px;
-        width: 100px;
+        width: 120px;
       }
-    .line li:active .dropdown{
-        display: block;     
+    .line li:hover .dropdown{
+        display: block;
       }
 
 
@@ -175,6 +180,7 @@
                     </div>
             </div>
       </div>
+
           <div class="aside3">
             <div class="aside_styles">  
                     <div class="link_container2">
@@ -182,17 +188,32 @@
                             <li>
                               <a href="#">Section 3</a>
                                 <ul class="dropdown">
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
                                   <li><a href="#">Paragraph 3</a></li>
+                                  <li><a href="#">Paragraph 4</a></li>
+                                  <li><a href="#">Paragraph 5</a></li>                  
+                                </ul>
+                            </li>
+                      </ul>
+                    </div>
+                      <div class="link_container4">
+                      <ul class="line">
+                            <li>
+                              <a href="#">Section 4</a>
+                                <ul class="dropdown">
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
                                   <li><a href="#">Paragraph 3</a></li>
-                                  <li><a href="#">Paragraph 3</a></li>
-                                  <li><a href="#">Paragraph 3</a></li>
-                                  <li><a href="#">Paragraph 3</a></li>                  
+                                  <li><a href="#">Paragraph 4</a></li>
+                                  <li><a href="#">Paragraph 5</a></li>                  
                                 </ul>
                             </li>
                       </ul>
                     </div>
             </div>
           </div>
+
       <div class="article">
               <div class="mask_1">          
                     <div class="aside_styles"></div>
