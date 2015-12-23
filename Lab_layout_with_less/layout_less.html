@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+
+		<title>Liquid layout inline</title>
+		<style>
+     /* * {
+        margin: 0;
+        padding: 0;        
+      }
+      body, html {
+        height: 100%;
+      }
+      .header, .footer, .nav, .content { 
+        margin: 0 auto;
+        padding: 0;
+      }
+      /*.header {
+        background: #aaa;
+        width: 100%;
+        min-height: 12%;
+      }
+      .header div {
+          position: relative;
+          top: 30%;
+      }
+      .nav {
+        background: #bbb;
+        width: 100%;
+        height: 8%;               
+      }
+      .breadcrumbs {}
+      .content {
+          position: relative;
+          width: 80%;   
+          /*min-height: 73%;
+          line-height: 0;       
+          font-size: 0;  
+          background: #ccc;
+      }
+      .mask_1 {
+        width: 42.6%;
+        left: -42.7%;
+        height: 100%;
+        position: absolute;
+        background: #ddd;
+        z-index: 0;
+      }
+      .mask_3 {
+        width: 42.7%;
+        right: -42.8%;
+        height: 100%;
+        position: absolute;
+        background: #ddd;
+        z-index: 0;
+      }*/
+      /*.article, .aside, .aside2{
+        display: inline-block;  
+        margin: 0;
+        padding: 0;
+        position: relative;
+        line-height: 1em; 
+        font-size: 14px;
+      }
+      .article {
+        width: 53.9%;
+        background: #ccc;
+        vertical-align: top;
+      }
+      .art_styles {
+        padding: 10px;
+      }
+      .aside, .aside2 {
+        vertical-align: top;
+        width: 23%;
+        background: #ddd;          
+        z-index: 1;           
+      }
+      .aside_styles {
+        padding: 10px;
+      }*/
+      .footer {
+/*          height: 7%;
+          width: 100%;
+          background: #999;
+      }
+
+    .link_container, .link_container2 {     
+      text-transform: uppercase;
+    }
+
+    .aside3 {
+      display: none;    
+    }
+
+    .link_container3 {     
+      text-transform: uppercase;
+    }
+
+    li {
+      border: 1px solid black;
+      list-style: none;
+      margin: auto;
+      padding: 15px;
+      text-align: center;
+    }
+*/
+
+    @media (max-width:800px) {
+    .content,.article {width: 100%;}
+    .mask_1, .mask_3, .nav, .link_container3, .aside2, .aside {display:none;}
+    h1{text-align:center;}
+
+    .aside3 {
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      line-height: 100%;
+      font-size: 14px;
+      background: #ddd; 
+      }
+     
+    .link_container2, .link_container4{
+      width: 49.7%;
+      vertical-align: top;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+
+    .line {
+        /*border: 1px solid black;*/
+        list-style: none;
+      }
+    .dropdown {
+        /*border: 1px solid black;*/
+        display: none;
+        position: relative;
+        list-style: none;
+      }
+    .dropdown li{
+        /*border: 1px solid black;*/
+        background: #ddd; 
+        margin: auto;
+        padding: 15px;
+        width: 150px;
+      }
+    .line li:hover .dropdown{
+        display: block;
+        
+      }
+  }
+	</style>
+	
+
+  </head>
+	<body>
+
+    <div class="header">
+      <div>
+        <h1>Title</h1>
+      </div>
+    </div>
+    
+    <div class="nav"></div>
+    
+    <div class="content">      
+    
+      <div class="aside">
+            <div class="aside_styles">  
+                    <div class="link_container">
+                      <ul class="line">
+                            <li>
+                              <a href="#">Section 1</a>
+                                <ul class="dropdown">
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 1</a></li>          
+                                </ul>
+                            </li>
+                      </ul>
+                    </div>
+            </div>
+      </div>
+
+          <div class="aside3">
+            <div class="aside_styles">  
+                    <div class="link_container2">
+                      <ul class="line">
+                            <li>
+                              <a href="#">Section 3</a>
+                                <ul class="dropdown">
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 3</a></li>
+                                  <li><a href="#">Paragraph 4</a></li>
+                                  <li><a href="#">Paragraph 5</a></li>                  
+                                </ul>
+                            </li>
+                      </ul>
+                    </div>
+                      <div class="link_container4">
+                      <ul class="line">
+                            <li>
+                              <a href="#">Section 4</a>
+                                <ul class="dropdown">
+                                  <li><a href="#">Paragraph 1</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 3</a></li>
+                                  <li><a href="#">Paragraph 4</a></li>
+                                  <li><a href="#">Paragraph 5</a></li>                  
+                                </ul>
+                            </li>
+                      </ul>
+                    </div>
+            </div>
+          </div>
+
+      <div class="article">
+              <div class="mask_1">          
+                    <div class="aside_styles"></div>
+              </div>
+              <div class="mask_3">          
+                    <div class="aside_styles"></div>
+              </div>
+                  <div class="art_styles">
+                  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                   "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                        "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                      </div>
+      </div>
+      <div class="aside2">
+                <div class="aside_styles">  
+                    <div class="aside_styles">  
+                    <div class="link_container3">
+                      <ul class="line">
+                            <li>
+                              <a href="#">Section 2</a>
+                                <ul class="dropdown">
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>
+                                  <li><a href="#">Paragraph 2</a></li>                  
+                                </ul>
+                            </li>
+
+                      </ul>
+                    </div>
+          </div>
+     </div>
+     </div>
+     </div>
+<div class="footer"></div>    
+	</body>
+</html>

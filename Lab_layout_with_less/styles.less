@@ -1,0 +1,130 @@
+@padding: 10px;
+@background1: #ddd;
+@background2: #ccc;
+@width_main_element: 100%;
+@main_position: relative;
+
+.otstup () {
+        margin: 0;
+        padding: 0; 
+.mask () {
+	    position: absolute;
+        background: @background1;
+        z-index: 0;
+}
+.full_screen_properties () {
+	// for .article, .aside, .aside2 
+        display: inline-block;  
+        margin: 0;
+        padding: 0;
+        position: @main_position;
+        line-height: 1em; 
+        font-size: 14px;
+}
+.elements () {
+// for .header, .footer, .nav, .content
+        margin: 0 auto;
+        padding: 0;
+}
+
+* {
+        .otstup ()        
+}
+
+ html,
+ body {
+        height: 100%;
+}
+ .header,
+ .footer,
+ .nav,
+ .content {
+ 	.elements ()
+ }
+
+.header {
+        background: #aaa;
+        width: @width_main_element;
+        min-height: 12%;
+        	div {
+			position:@main_position;
+          	top: 30%;
+        }
+}
+.nav {
+        background: #bbb;
+        width: @width_main_element;
+        height: 8%;               
+}
+
+.content {
+          position:@main_position;
+          width: 80%;   
+          line-height: 0;       
+          font-size: 0;  
+          background: @backg;
+	}
+
+.article {
+      	.full_screen_properties ();
+      	.otstup ();
+      	display: inline-block;  
+        position: @main_position;
+        line-height: 1em; 
+        font-size: 14px;
+        width: 53.9%;
+        background: @background2;
+        vertical-align: top;
+       }
+
+			   .mask_1 {
+					.mask ();
+			        width: 42.6%;
+			        left: -42.7%;
+			        height: 100%;
+			}
+			   .mask_3 {
+				 	.mask ();
+			        width: 42.7%;
+			        right: -42.8%;
+			        height: 100%;
+			}
+
+	.aside, 
+	.aside2 {
+	    .full_screen_properties ();
+      	.otstup ();
+      	vertical-align: top;
+        width: 23%;
+        background: @background1;          
+        z-index:1;
+	}
+        	.aside_styles {
+        	padding: @padding;
+        	}
+
+		    .link_container,
+		    .link_container2 {     
+		     text-transform: uppercase;
+		    }
+
+		    .aside3 {
+		     display: none;    
+		    }
+
+		    .link_container3 {     
+		     text-transform: uppercase;
+		    }
+
+    li {
+      list-style: none;
+      margin: auto;
+      padding: 15px;
+      text-align: center;
+    }
+}
+.footer {
+          height: 7%;
+          width: 100%;
+          background: #999;
+}
