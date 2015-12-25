@@ -3,10 +3,12 @@
 @background2: #ccc;
 @width_main_element: 100%;
 @main_position: relative;
+@h1_text-align:center;
 
 .otstup () {
         margin: 0;
         padding: 0; 
+      }
 .mask () {
 	    position: absolute;
         background: @background1;
@@ -31,15 +33,20 @@
         .otstup ()        
 }
 
- html,
- body {
-        height: 100%;
+html,
+body {
+  height: 100%;
 }
+h1{
+  text-align:@h1_text-align;
+}
+
+
  .header,
  .footer,
  .nav,
  .content {
- 	.elements ()
+ 	        .elements ();
  }
 
 .header {
@@ -47,8 +54,8 @@
         width: @width_main_element;
         min-height: 12%;
         	div {
-			position:@main_position;
-          	top: 30%;
+			       position:@main_position;
+          	 top: 30%;
         }
 }
 .nav {
@@ -62,7 +69,7 @@
           width: 80%;   
           line-height: 0;       
           font-size: 0;  
-          background: @backg;
+          background: @background2;
 	}
 
 .article {
@@ -75,7 +82,7 @@
         width: 53.9%;
         background: @background2;
         vertical-align: top;
-       }
+}
 
 			   .mask_1 {
 					.mask ();
@@ -92,39 +99,80 @@
 
 	.aside, 
 	.aside2 {
-	    .full_screen_properties ();
+	      .full_screen_properties ();
       	.otstup ();
       	vertical-align: top;
         width: 23%;
         background: @background1;          
         z-index:1;
 	}
-        	.aside_styles {
+          .aside_styles {
         	padding: @padding;
         	}
 
 		    .link_container,
-		    .link_container2 {     
-		     text-transform: uppercase;
-		    }
-
-		    .aside3 {
-		     display: none;    
-		    }
-
 		    .link_container3 {     
 		     text-transform: uppercase;
 		    }
 
+		  .aside3, .link_container2 {
+		     display: none;    
+		    }
+        
     li {
       list-style: none;
       margin: auto;
       padding: 15px;
-      text-align: center;
+      text-align: @h1_text-align;
     }
-}
 .footer {
           height: 7%;
-          width: 100%;
+          width: @width_main_element;
           background: #999;
+}
+
+@media (max-width:800px) {
+    .content,.article {width: 100%;}
+    .mask_1,
+    .mask_3,
+    .nav,
+    .link_container, 
+    .link_container3,
+    .aside2,
+    .aside {display: none;}
+
+h1{
+      text-align:@h1_text-align;
+}
+.aside3 {
+      text-align: center;
+      width: @width_main_element;
+      display: inline-block;
+      line-height: 100%;
+      font-size: 14px;
+      background: @background1; 
+}
+.link_container2, .link_container4 {
+      width: 49.7%;
+      vertical-align: top;
+      display: inline-block;
+      text-transform: uppercase;
+}
+.line {
+      list-style: none;
+}
+.dropdown {
+        display: none;
+        position: @main_position;
+        list-style: none;
+}
+.dropdown li{
+        background: @background1; 
+        margin: auto;
+        padding: 15px;
+        width: 150px;
+}
+.line li:hover .dropdown{
+        display: block;
+}
 }

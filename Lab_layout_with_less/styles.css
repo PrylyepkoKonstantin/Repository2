@@ -1,6 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+h1 {
+  text-align: center;
+}
+.header,
+.footer,
+.nav,
+.content {
+  margin: 0 auto;
+  padding: 0;
+}
+.header {
+  background: #aaa;
+  width: 100%;
+  min-height: 12%;
+}
+.header div {
+  position: relative;
+  top: 30%;
+}
+.nav {
+  background: #bbb;
+  width: 100%;
+  height: 8%;
+}
+.content {
+  position: relative;
+  width: 80%;
+  line-height: 0;
+  font-size: 0;
+  background: #ccc;
+}
+.article {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  position: relative;
+  line-height: 1em;
+  font-size: 14px;
+  width: 53.9%;
+  background: #ccc;
+  vertical-align: top;
+}
+.mask_1 {
+  position: absolute;
+  background: #ddd;
+  z-index: 0;
+  width: 42.6%;
+  left: -42.7%;
+  height: 100%;
+}
+.mask_3 {
+  position: absolute;
+  background: #ddd;
+  z-index: 0;
+  width: 42.7%;
+  right: -42.8%;
+  height: 100%;
+}
+.aside,
+.aside2 {
+  display: inline-block;
+  position: relative;
+  line-height: 1em;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: 23%;
+  background: #ddd;
+  z-index: 1;
+}
+.aside_styles {
+  padding: 10px;
+}
+.link_container,
+.link_container3 {
+  text-transform: uppercase;
+}
+.aside3,
+.link_container2 {
+  display: none;
+}
+li {
+  list-style: none;
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+}
 .footer {
   height: 7%;
   width: 100%;
   background: #999;
+}
+@media (max-width: 800px) {
+  .content,
+  .article {
+    width: 100%;
+  }
+  .mask_1,
+  .mask_3,
+  .nav,
+  .link_container,
+  .link_container3,
+  .aside2,
+  .aside {
+    display: none;
+  }
+  h1 {
+    text-align: center;
+  }
+  .aside3 {
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    line-height: 100%;
+    font-size: 14px;
+    background: #ddd;
+  }
+  .link_container2,
+  .link_container4 {
+    width: 49.7%;
+    vertical-align: top;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+  .line {
+    list-style: none;
+  }
+  .dropdown {
+    display: none;
+    position: relative;
+    list-style: none;
+  }
+  .dropdown li {
+    background: #ddd;
+    margin: auto;
+    padding: 15px;
+    width: 150px;
+  }
+  .line li:hover .dropdown {
+    display: block;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
