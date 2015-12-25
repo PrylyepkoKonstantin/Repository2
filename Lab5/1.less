@@ -1,0 +1,84 @@
+@padd: 15px 300px;
+@back-col: lightcoral; // background color for header and footer
+@back-col-gr: lightgray;
+@colr: white;  //header and footer color of font
+
+.hdr-ftr{
+    background: @back-col;
+    padding: @padd;
+    color: @colr;
+    box-sizing: border-box;
+  }
+
+html, body{
+    height: 100%;
+  }
+
+.page-wrapper {
+    min-height: 100%;
+    margin-bottom: -50px;
+  }
+
+* html .page-wrapper {
+    height: 100%;
+  }
+
+  .page-buffer {
+    height: 50px;
+  }
+
+header{
+  .hdr-ftr;
+  height: 55px;
+  .logo{
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+    float: left;
+      &:hover{text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+      cursor: pointer;
+      }
+  } 
+  .menu{
+    float: right;
+    margin: 0;
+    .label-menu{
+      font-size: 20px;
+    }
+  .label-menu {
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+    .sel-menu{
+    text-transform: uppercase;
+    border: 1px solid white;
+    background: @back-col;
+    padding: 5px 30px;
+    margin-left: 15px;
+      .gold {
+        background: yellow;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .silver {
+        background: silver;
+        font-weight: bold;
+        font-style: italic;
+      }
+      .bronze {
+        background: orange;
+        font-weight: bold;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+footer{
+  .hdr-ftr;
+}

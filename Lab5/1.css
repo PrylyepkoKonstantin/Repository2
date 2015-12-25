@@ -1,0 +1,81 @@
+.hdr-ftr {
+  background: lightcoral;
+  padding: 15px 300px;
+  color: white;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+* html .page-wrapper {
+  height: 100%;
+}
+.page-buffer {
+  height: 50px;
+}
+header {
+  background: lightcoral;
+  padding: 15px 300px;
+  color: white;
+  box-sizing: border-box;
+  height: 55px;
+}
+header .logo {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  float: left;
+}
+header .logo:hover {
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+header .menu {
+  float: right;
+  margin: 0;
+}
+header .menu .label-menu {
+  font-size: 20px;
+}
+header .menu .label-menu {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+header .menu .sel-menu {
+  text-transform: uppercase;
+  border: 1px solid white;
+  background: lightcoral;
+  padding: 5px 30px;
+  margin-left: 15px;
+}
+header .menu .sel-menu .gold {
+  background: yellow;
+  font-weight: bold;
+  font-style: italic;
+}
+header .menu .sel-menu .silver {
+  background: silver;
+  font-weight: bold;
+  font-style: italic;
+}
+header .menu .sel-menu .bronze {
+  background: orange;
+  font-weight: bold;
+  font-style: italic;
+}
+footer {
+  background: lightcoral;
+  padding: 15px 300px;
+  color: white;
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=1.css.map */
