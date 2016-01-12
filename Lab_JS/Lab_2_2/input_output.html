@@ -9,7 +9,19 @@
 		var firstNumber = prompt("Enter first number");
 			secondNumber = prompt("Enter second number");
 			operator = prompt("Enter arithmetic operator");
-		alert("a" c "b");
+
+			switch(operator) {
+			  case "+": alert("Result is: " + (parseInt(firstNumber) + parseInt(secondNumber)));
+			  break;
+			  case "-": alert("Result is: " + (parseInt(firstNumber) - parseInt(secondNumber)));
+			  break;
+			  case "*": alert("Result is: " + (parseInt(firstNumber) * parseInt(secondNumber)));
+			  break;
+			  case "/": alert("Result is: " + (parseInt(firstNumber) / parseInt(secondNumber)));
+			  break;
+			  default: alert("Wrong operator");
+			}
+		
 		</script>
 </body>
 </html>
